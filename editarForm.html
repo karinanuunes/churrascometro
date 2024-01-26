@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Formulario</title>
+</head>
+
+<body>
+    <label for="">Data</label>
+    <input id="data" type="date" required />
+    <br />
+    <label for="">Quantidade de Homens</label>
+    <input id="qtdHomens" type="number" required />
+    <br />
+    <label for="">Quantidade de Mulheres</label>
+    <input id="qtdMulheres" type="number" required />
+    <br />
+    <label for="">Quantidade de Crianças</label>
+    <input id="qtdCriancas" type="number" required />
+    <br />
+    <button onclick="atualizarChurrasco()" id="botaoEnviar" type="button" value="Enviar">
+        Enviar
+    </button>
+
+    <script>
+        let idGlobal;
+
+        async function buscarDados() {
+            const urlParams = new URLSearchParams(window.location.search);
+            idGlobal = urlParams.get("id");
+            const resposta = await fetch(
+                `http://localhost:3000/churrasco/${idGlobal}`
+            );
+            const minhaData = await resposta.json();
+            console.log(minhaData);
+            document.getElementById("data").value = minhaData.data;
+            document.getElementById("qtdHomens").value = minhaData.qtdHomens;
+            document.getElementById("qtdMulheres").value = minhaData.qtdMulheres;
+            document.getElementById("qtdCriancas").value = minhaData.qtdCriancas;
+
+            console.log("Entrou no preenchimento do formulario");
+        }
+
+        async function atualizarChurrasco() {
+            
+            let data = document.getElementById("data").value;
+            let qtdHomens = parseInt(document.getElementById("qtdHomens").value);
+            let qtdMulheres = parseInt(
+                document.getElementById("qtdMulheres").value
+            );
+            let qtdCriancas = parseInt(
+                document.getElementById("qtdCriancas").value
+            );
+            let qtdPessoas = qtdCriancas + qtdMulheres + qtdHomens;
+            let carnes = qtdHomens * 0.4 + qtdMulheres * 0.32 + qtdCriancas * 0.2;
+            let paoDeAlho = (qtdHomens + qtdMulheres) * 2 + qtdCriancas;
+            let carvao = qtdHomens + qtdMulheres + qtdCriancas;
+            let refrigerantes = carvao / 5;
+            let cerveja = (qtdHomens + qtdMulheres) * 3;
+
+            const dados = {
+                data,
+                qtdHomens,
+                qtdMulheres,
+                qtdCriancas,
+                qtdPessoas,
+                carnes,
+                paoDeAlho,
+                carvao,
+                refrigerantes,
+                cerveja,
+            };
+
+            console.log("Criou os novos dados");
+
+            const response = await fetch(
+                `http://localhost:3000/churrasco/${idGlobal}`,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(dados),
+                }
+            );
+
+            window.location.href = `form.html`;
+        }
+
+        buscarDados();
+    </script>
+    <script src="projetoChurrasco/js/script.js"></script>
+</body>
+
+</html>

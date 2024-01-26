@@ -1,0 +1,17 @@
+{
+  "churrasco": [
+    {
+      "id": "2f0a",
+      "data": "2024-01-27",
+      "qtdHomens": 20,
+      "qtdMulheres": 20,
+      "qtdCriancas": 5,
+      "qtdPessoas": 45,
+      "carnes": 15.4,
+      "paoDeAlho": 85,
+      "carvao": 45,
+      "refrigerantes": 9,
+      "cerveja": 120
+    }
+  ]
+}

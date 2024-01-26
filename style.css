@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #41373C;
+  background-size: cover;
+}
+
+h1 {
+  color: #FB9E50;
+  text-align: center; 
+  margin-top: 20px;
+  font-size: 56px;
+}
+
+p {
+  color: white; 
+  text-align: center; 
+  margin-top: 20px;
+}
+
+#churrascoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  align-items: center; 
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 150px; 
+}
+
+form label {
+  color: white; 
+}
+
+.form-group input[type="date"],
+.form-group input[type="number"] {
+  width: 100%; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px; 
+}
+
+#botaoEnviar {
+  padding: 10px 20px;
+  border: none;
+  background-color: #FB9E50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+table {
+  width: 90%; 
+  margin: 20px auto;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 7px; 
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); 
+  border: 1px solid #fff; 
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.remover-btn, .editar-btn {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px; 
+}
+
+.editar-btn {
+  background-color: #FB9E50; 
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+}
+
+.remover-btn {
+  background-color: #FB9E50; 
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+}
+
+.editar-btn:hover, .remover-btn:hover {
+  background-color: #e58e26; 
+}
+
+
+.editar-btn i, .remover-btn i {
+  color: white;
+}
