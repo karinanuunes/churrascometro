@@ -1,7 +1,7 @@
 {
   "churrasco": [
     {
-      "id": "2f0a",
+      "id": 1,
       "data": "2024-01-27",
       "qtdHomens": 20,
       "qtdMulheres": 20,
@@ -11,6 +11,58 @@
       "paoDeAlho": 85,
       "carvao": 45,
       "refrigerantes": 9,
+      "cerveja": 120
+    },
+    {
+      "id": 2,
+      "data": "",
+      "qtdHomens": null,
+      "qtdMulheres": null,
+      "qtdCriancas": null,
+      "qtdPessoas": null,
+      "carnes": null,
+      "paoDeAlho": null,
+      "carvao": null,
+      "refrigerantes": null,
+      "cerveja": null
+    },
+    {
+      "id": 3,
+      "data": "2024-01-04",
+      "qtdHomens": 10,
+      "qtdMulheres": 10,
+      "qtdCriancas": 10,
+      "qtdPessoas": 30,
+      "carnes": 9.2,
+      "paoDeAlho": 50,
+      "carvao": 30,
+      "refrigerantes": 6,
+      "cerveja": 60
+    },
+    {
+      "id": 4,
+      "data": "",
+      "qtdHomens": null,
+      "qtdMulheres": null,
+      "qtdCriancas": null,
+      "qtdPessoas": null,
+      "carnes": null,
+      "paoDeAlho": null,
+      "carvao": null,
+      "refrigerantes": null,
+      "cerveja": null
+    },
+    {
+      "id": 5,
+      "data": "2024-01-03",
+      "qtdHomens": 20,
+      "qtdMulheres": 20,
+      "qtdCriancas": 20,
+      "qtdPessoas": 60,
+      "carnes": 18.4,
+      "paoDeAlho": 100,
+      "carvao": 60,
+      "refrigerantes": 12,
       "cerveja": 120
     }
   ]

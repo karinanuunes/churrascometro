@@ -5,6 +5,7 @@ function getNextId() {
 }
 
 buscarDados();
+
 function adicionarChurrasco() {
   let data = document.getElementById("data").value;
   let qtdHomens = parseInt(document.getElementById("qtdHomens").value);
@@ -56,9 +57,9 @@ function adicionarRegistro(novoRegistro) {
     <button onclick="editarRegistro(${novoRegistro.id})" class="editar-btn"><i class="fas fa-pencil-alt"></i></button>
     <button class="remover-btn" onclick="removerUltimoRegistro(event, ${novoRegistro.id})"><i class="fas fa-trash"></i></button>`;
 }
+
 async function editarRegistro(id) {
   window.location.href = `editarForm.html?id=${id}`;
-
 }
 
 function removerUltimoRegistro(event, id) {
@@ -75,7 +76,7 @@ function removerUltimoRegistro(event, id) {
     const linhaASerRemovida = botaoClicado.closest("tr");
 
     // Obtém o ID do registro a ser removido
-    //const idRegistro = parseInt(linhaASerRemovida.cells[0].innerText);
+    // const idRegistro = parseInt(linhaASerRemovida.cells[0].innerText);
 
     // Remove a linha da tabela
     linhaASerRemovida.remove();

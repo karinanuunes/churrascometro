@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário Churrasco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Churrascômetro</h1>
-        <p>Precisa de ajudinha com o churrasco? :D</p>
-        <p>Quantas pessoas vão participar?</p>
-        <form id="churrascoForm" action="">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="data">Data</label>
-                    <input id="data" type="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="qtdHomens">Homens</label>
-                    <input id="qtdHomens" type="number" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="qtdMulheres">Mulheres</label>
-                    <input id="qtdMulheres" type="number" required>
-                </div>
-                <div class="form-group">
-                    <label for="qtdCriancas">Crianças</label>
-                    <input id="qtdCriancas" type="number" required>
-                </div>
-            </div>
-            <input id="botaoEnviar" type="submit" value="Enviar">
-        </form>
+      <h1>Churrascômetro</h1>
+      <p>Precisa de ajudinha com o churrasco? :D</p>
+      <p>Quantas pessoas vão participar?</p>
+      <form id="churrascoForm" action="">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input id="data" type="date" required />
+          </div>
+          <div class="form-group">
+            <label for="qtdHomens">Homens</label>
+            <input id="qtdHomens" type="number" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="qtdMulheres">Mulheres</label>
+            <input id="qtdMulheres" type="number" required />
+          </div>
+          <div class="form-group">
+            <label for="qtdCriancas">Crianças</label>
+            <input id="qtdCriancas" type="number" required />
+          </div>
+        </div>
+        <input
+          id="botaoEnviar"
+          type="submit"
+          value="Enviar"
+          onclick="adicionarChurrasco()"
+        />
+      </form>
     </header>
 
     <main>
-        <table id="churrascoTable">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Quantidade de Pessoas</th>
-                    <th>Carne (KG)</th>
-                    <th>Pão de Alho</th>
-                    <th>Carvão</th>
-                    <th>Refrigerante</th>
-                    <th>Cerveja</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-        </table>
+      <table id="churrascoTable">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Quantidade de Pessoas</th>
+            <th>Carne (KG)</th>
+            <th>Pão de Alho</th>
+            <th>Carvão</th>
+            <th>Refrigerante</th>
+            <th>Cerveja</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
     </main>
-</body>
+  </body>
 </html>
